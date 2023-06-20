@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "janschatgptkernel"
+version = "0.0.1"
+authors = [
+  { name="Jan Arman Parpin", email="is@hidden.com" },
+]
+description = "A jupyter ChatGPT kernel."
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Framework :: Jupyter :: JupyterLab :: 4"
+]
+dependencies = [
+    "ipykernel",
+    "openai"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jans-code/janschatgptkernel"
+"Bug Tracker" = "https://github.com/jans-code/janschatgptkernel/issues"
+
+[project.scripts]
+janschatgptkernel = "janschatgptkernel.install_kernelspec:install_kernelspec"
