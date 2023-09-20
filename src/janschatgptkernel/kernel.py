@@ -21,7 +21,7 @@ class janschatgptkernel(Kernel):
                    allow_stdin=False):
         if not silent:            
             completion = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4",
                 messages=[
                     {"role": "user", "content": code}
                 ]
