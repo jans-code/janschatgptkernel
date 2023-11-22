@@ -1,4 +1,8 @@
-##!/usr/bin/env python
+#!/usr/bin/env python
+# *_* coding: utf-8 *_*
+
+"""janschatgptkernel"""
+
 import os
 import openai
 from ipykernel.kernelbase import Kernel
@@ -19,8 +23,8 @@ class janschatgptkernel(Kernel):
 
     def do_execute(self, code, silent, store_history=True, user_expressions=None,
                    allow_stdin=False):
-        if not silent:            
-            completion = openai.ChatCompletion.create(
+        if not silent:
+            completion = openai.chat.completions.create(
                 model="gpt-4",
                 messages=[
                     {"role": "user", "content": code}
